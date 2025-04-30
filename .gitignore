@@ -2,3 +2,4 @@
 /.idea/
 /*.phar
 /.phpunit.result.cache
+/nbproject/private/
