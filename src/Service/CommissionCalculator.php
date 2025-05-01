@@ -13,12 +13,6 @@ class CommissionCalculator
         $this->nonEuRate = $nonEuRate;
     }
 
-    // public function calculate(float $amount, bool $isEu): float
-    // {
-    //     $rate = $isEu ? $this->euRate : $this->nonEuRate;
-    //     return $amount * $rate;
-    // }
-
     /**
      * Calculates the commission based on amount and whether the country is in EU or not.
      */

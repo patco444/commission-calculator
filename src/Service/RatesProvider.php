@@ -44,8 +44,6 @@ class RatesProvider
                 throw new \RuntimeException("Missing EUR rate in response");
             }
 
-            // echo "Rate for {$currency}: " . $data['rates'][$currency] . "\n";
-
             return $data['rates'][$currency];
         } catch (GuzzleException $e) {
             throw new \RuntimeException("Exchange rate lookup failed: " . $e->getMessage());
