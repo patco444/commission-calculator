@@ -9,7 +9,11 @@ return [
 
     // Base URI for exchange rates API
     'rates' => [
-        'base_url' => 'https://api.exchangerate.host/',
+        // ExchangeRate.Host API is not working
+        // 'base_url' => 'https://api.exchangerate.host/',
+        // 'access_key' => 'b04b453826710fa9c76c166fddecb434' 
+        'base_url' => 'https://api.apilayer.com/exchangerates_data/latest',
+        'api_key' => 'MUTqIxWhQFk44JMBP66kAcH7PEd7GiWq'
     ],
 
     // Commission rates (EU vs Non-EU)
