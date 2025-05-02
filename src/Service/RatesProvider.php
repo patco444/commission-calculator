@@ -5,7 +5,7 @@ namespace App\Service;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 
-class RatesProvider
+class RatesProvider implements ExchangeRateProvider
 {
     private ClientInterface $client;
     private string $apiKey;
@@ -41,7 +41,7 @@ class RatesProvider
             $data = json_decode($response->getBody()->getContents(), true);
 
             if (!isset($data['rates'][$currency])) {
-                throw new \RuntimeException("Missing EUR rate in response");
+                throw new \RuntimeException("Missing " . $currency . " rate in response");
             }
 
             return $data['rates'][$currency];
