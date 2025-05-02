@@ -58,9 +58,13 @@ Place it in input/input.txt
 Each line should be a JSON object:
 {"bin":"45717360","amount":"100.00","currency":"EUR"}
 
+---
+
 ## Running the App
 php app.php
     -> The script will print one commission result per line.
+
+---
 
 ## Running Unit Tests
 This project uses PHPUnit for unit testing. Use the command:
