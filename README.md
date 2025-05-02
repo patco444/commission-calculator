@@ -14,7 +14,7 @@ A PHP application that calculates transaction commissions based on BIN (Bank Ide
 
 ---
 
-## 🧱 Architecture
+## 🔧 Architecture
 
 The application is structured around service classes:
 
@@ -37,35 +37,45 @@ The application is structured around service classes:
 ## ⚙️ Setup
 
 1. Clone the repository:
-
-   git clone https://github.com/patco444/commission-calculator.git
-   cd commission-calculator
+``` bash
+git clone https://github.com/patco444/commission-calculator.git
+cd commission-calculator
+```
 
 2. Install dependencies:
-    composer install
+``` bash
+composer install
+```
 
 3. Configure API keys and settings in config/config.php:
 
-    'rates' => [
-        'base_url' => 'https://api.apilayer.com/exchangerates_data/latest',
-        'api_key' => 'YOUR_API_KEY'
-    ],
+``` php
+'rates' => [
+   'base_url' => 'https://api.apilayer.com/exchangerates_data/latest',
+   'api_key' => 'YOUR_API_KEY'
+],
+```
 
 4. Prepare your input file:
 
-Place it in input/input.txt
+Place the input file at `input/input.txt`.
 
 Each line should be a JSON object:
+``` json
 {"bin":"45717360","amount":"100.00","currency":"EUR"}
+```
 
 ---
 
-## Running the App
+## ✅ Running the App
+The script will print one commission result per line.
+``` bash
 php app.php
-    -> The script will print one commission result per line.
-
+```   
 ---
 
-## Running Unit Tests
+## 💡 Running Unit Tests
 This project uses PHPUnit for unit testing. Use the command:
-    php vendor/bin/phpunit
+``` bash
+php vendor/bin/phpunit
+```
